@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+
+    {{!-- favicon --}}
+    <link rel="icon" href="assets/favicon/signin.ico" type="image/x-icon" />
+
+
+    {{>mainCss}}
+    <link href="css/signin.css" rel="stylesheet">
+    <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    {{>topbar}}
+    {{>header}}
+    <main id="main">
+    <section class="inner-page pt-3">
+      <div class="container">
+        <div class="right" id="thisContainer">
+          <img src="assets/clipArt/signin.png">
+        </div>
+        <div class="right">
+          <form action="#" class="sign-in-form" method="POST">
+            <h2 class="title">Sign In</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </main>
+    <!-- End #main -->
+    {{>copyright}}
+</body>
+    {{>mainJS}}
+</html>
