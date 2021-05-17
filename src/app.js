@@ -28,6 +28,18 @@ app.get("/signin", (req,res) => {
     res.render("signin");
 });
 
+app.get("/contact", (req,res) => {
+    res.render("contactPage");
+});
+
+app.get("/faq", (req,res) => {
+    res.render("faqPage");
+});
+
+app.get("/services", (req,res) => {
+    res.render("servicesPage");
+});
+
 app.listen(port, () => {
     console.log(`server is running at port ${port}`);
 });

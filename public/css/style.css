@@ -318,6 +318,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #473d3a;
 }
 
+/* Active Tab */
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
   color: #2e58d7;
 }
@@ -1047,7 +1048,7 @@ section {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #2e58d7;
-  background: #fff1ed;
+  background: #cbd6eb;
 }
 
 .portfolio #portfolio-flters li:last-child {
