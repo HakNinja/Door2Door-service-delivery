@@ -67,7 +67,8 @@ app.post("/signin", async(req,res) => {
         const email=req.body.email;
         const password=req.body.password;
         const temp = await User.findOne({email:email});
-        const isMatched = await bcrypt.compare(password,temp.password)
+        console.log(temp);
+        const isMatched = await bcrypt.compare(password,temp.password);
         if(isMatched){
             res.status(201).render("index");           
         } 
