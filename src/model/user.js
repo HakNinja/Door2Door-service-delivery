@@ -30,11 +30,11 @@ const userSchema = new mongoose.Schema({
 //middleware
 userSchema.methods.generateAuthToken = async function(){
     try {
-        const token = await jwt.sign({_id:this._id.toString()},"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        const token = await jwt.sign({_id:this._id.toString()},process.env.SECRET_KEY);
         this.tokens = this.tokens.concat({token}); 
         await this.save();
         return token;
-        //const userVer= await jwt.verify(token,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        //const userVer= await jwt.verify(token,process.env.SECRET_KEY);
         //console.log(userVer);
     } catch (error) {
         res.send("ERRRRRor");

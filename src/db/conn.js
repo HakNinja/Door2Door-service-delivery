@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // DataBase Connection
-mongoose.connect("mongodb://localhost:27017/Door2Door",{
+mongoose.connect( process.env.DATABASE, {
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true
