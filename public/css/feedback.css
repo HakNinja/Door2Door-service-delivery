@@ -1,0 +1,81 @@
+.feedback .info-box {
+  color: #313030;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px;
+}
+
+.feedback .info-box i {
+  font-size: 32px;
+  color: #2e58d7;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #6e81eb;
+  float: left;
+}
+
+.feedback .info-box h3 {
+  font-size: 20px;
+  color: #656262;
+  font-weight: 700;
+  margin: 10px 0 10px 68px;
+}
+
+.feedback .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.feedback .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+}
+
+.feedback .php-email-form input, .feedback .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.feedback .php-email-form input:focus, .feedback .php-email-form textarea:focus {
+  border-color: #2e58d7;
+}
+
+.feedback .php-email-form input {
+  padding: 10px 15px;
+}
+
+.feedback .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.feedback .php-email-form button[type="submit"] {
+  background: #2e58d7;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.feedback .php-email-form button[type="submit"]:hover {
+  background: #829dec;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

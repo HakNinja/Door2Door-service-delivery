@@ -100,14 +100,36 @@ app.post("/contact", async(req,res) => {
     }
 });
 
+// get feedback page
+app.get("/feedback", (req,res) => {
+    res.render("feedbackpage");
+});
+
+// post feedback page 
+app.post("/feedback", async(req,res) => {
+    try {
+        const report = new Feedback({
+            subject:req.body.subject,
+            feedback:req.body.feedback
+        })
+        const Reported = await report.save();
+        res.status(201).render("feedbackpage");
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+// get faq page
 app.get("/faq", (req,res) => {
     res.render("faqPage");
 });
 
+//get services page
 app.get("/services", (req,res) => {
     res.render("servicesPage");
 });
 
+//listing at
 app.listen(port, () => {
     console.log(`server is running at port ${port}`);
 });

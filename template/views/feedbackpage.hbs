@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback/Report</title>
+
+    {{!-- favicon --}}
+    <link rel="icon" href="assets/favicon/feedback.ico" type="image/x-icon" />
+    
+    {{>mainCss}}
+
+    <link href="css/feedback.css" rel="stylesheet">
+
+</head>
+<body>
+    {{>topbar}}
+    {{>header}}
+    <main id="main">
+    <section class="inner-page pt-3">
+      <div class="container">
+          {{>feedback}}
+          </div>
+    </section>
+    </main>
+    <!-- End #main -->
+    {{>copyright}}
+</body>
+  {{>mainJS}}
+</html>
