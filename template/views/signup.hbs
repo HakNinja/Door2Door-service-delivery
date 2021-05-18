@@ -24,29 +24,42 @@
     <section class="inner-page pt-3">
       <div class="container">
         <div class="left">
-          <form action="#" class="sign-up-form" method="POST">
+          <form action="/signup" class="sign-up-form" method="POST">
             <h2 class="title">Sign Up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" 
+                      placeholder="Username" 
+                      title="Enter a username" 
+                      name="username" 
+                      required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-phone"></i>
-              <input type="text" placeholder="Contact number" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="email" 
+                      placeholder="Email" 
+                      title="Enter a valid e-mail,further need for verification" 
+                      name="email" 
+                      required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Confirm Password" />
+              <input type="password" 
+                      placeholder="Password" 
+                      title="Enter a strong password" 
+                      name="password" 
+                      required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" 
+                      placeholder="Confirm Password" 
+                      title="Same as password" 
+                      name="confirmpassword" 
+                      required />
             </div>
             <input type="submit" class="btn" value="Sign up" />
+            <!-- Or -->
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
