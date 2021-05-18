@@ -46,6 +46,8 @@ app.post("/signup", async(req,res) => {
         })
         if (newuser.password===newuser.confirmpassword){
             //middleware
+            const token = await newuser.generateAuthToken();
+
             const Signup = await newuser.save();
             res.status(201).render("index");    
         }else{
@@ -67,8 +69,11 @@ app.post("/signin", async(req,res) => {
         const email=req.body.email;
         const password=req.body.password;
         const temp = await User.findOne({email:email});
-        console.log(temp);
         const isMatched = await bcrypt.compare(password,temp.password);
+        
+        //middleware
+        const token = await temp.generateAuthToken();
+        
         if(isMatched){
             res.status(201).render("index");           
         } 
