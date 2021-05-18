@@ -9,7 +9,6 @@
     {{!-- favicon --}}
     <link rel="icon" href="assets/favicon/signup.ico" type="image/x-icon" />
     
-
     {{>mainCss}}
     <link href="css/signup.css" rel="stylesheet">
     <script
@@ -46,17 +45,33 @@
               <i class="fas fa-lock"></i>
               <input type="password" 
                       placeholder="Password" 
-                      title="Enter a strong password" 
+                      title="Enter a strong password"
+			                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~'=?\|\]\[\(\)\-<>/]).{8,}" 
                       name="password" 
+                      id="password"
                       required />
             </div>
+            <!-- message-1 -->
+            <div id="message">
+              <h6 id="passhead">Password must contain the following:</h6>
+              <h6 id="letter" class="invalid">A <b>lowercase</b> letter</h6>
+              <h6 id="capital" class="invalid">A <b>capital (uppercase)</b> letter</h6>
+              <h6 id="number" class="invalid">A <b>number</b></h6>
+              <h6 id="length" class="invalid">Minimum <b>8 characters</b></h6>
+              <h6 id="schar" class="invalid">A <b>special character</b></h6>
+            </div> 
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" 
                       placeholder="Confirm Password" 
                       title="Same as password" 
                       name="confirmpassword" 
+                      id="confirmpassword"
                       required />
+            </div>
+            <!-- message-2 -->
+            <div id="cmessage">
+                <h6 id="cerror" class="invalid">confirm password must be same as <b>password</b></h6>
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <!-- Or -->
@@ -87,4 +102,5 @@
     {{>copyright}}
 </body>
   {{>mainJS}}
+  <script src="js/signup.js"></script>
 </html>
