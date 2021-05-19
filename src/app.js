@@ -49,6 +49,11 @@ app.post("/signup", async(req,res) => {
             //middleware
             const token = await newuser.generateAuthToken();
 
+            res.cookie("jwt", token, {
+                expires:new Date(Date.now() + 100000),
+                httpOnly:true
+            });
+
             const Signup = await newuser.save();
             res.status(201).render("index");    
         }else{
@@ -74,6 +79,11 @@ app.post("/signin", async(req,res) => {
         
         //middleware
         const token = await temp.generateAuthToken();
+        
+        res.cookie("jwt", token, {
+            expires:new Date(Date.now() + 100000),
+            httpOnly:true
+        });
         
         if(isMatched){
             res.status(201).render("index");           
