@@ -4,6 +4,8 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
+const cookieParser = require('cookie-parser');
+
 
 require("./db/conn");
 
@@ -19,6 +21,7 @@ const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../template/views");
 const partials_path = path.join(__dirname, "../template/partials");
 
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
@@ -79,11 +82,13 @@ app.post("/signin", async(req,res) => {
         
         //middleware
         const token = await temp.generateAuthToken();
-        
+
         res.cookie("jwt", token, {
             expires:new Date(Date.now() + 100000),
             httpOnly:true
         });
+
+        console.log(`cookie - ${req.cookies.jwt}`);
         
         if(isMatched){
             res.status(201).render("index");           
