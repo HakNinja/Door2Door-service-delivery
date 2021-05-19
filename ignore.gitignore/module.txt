@@ -1,0 +1,39 @@
+﻿Home:
+    default page for the site and all the others links are available in this page.
+
+
+Authentication$
+    completed provide log-in and log-out facilities for user
+    and create a session while user is online
+
+
+Master Module:
+    A master module is developed to maintain property registration, floor plan and 
+    property images, maintain property document, client registration, vendor \
+    registration solicitor details, and user management. 
+
+
+User-dashboard:
+    used for information management and business intelligence of a particular user
+
+
+Search and Query Module:
+    Search and Query module is used for the user, supervisor and management of 
+    Property Management System. This module includes query builder and keyword 
+    based search facilities.
+
+
+Method of Randomization:
+    The mode which is going to be used for this! How the groups are going to be foramed If any Blinding is involved. What variable is going to be  differentiating the groups
+
+
+E-commerce:
+    buying and selling of goods and services, or the transmitting of funds or data, 
+    over an electronic network, primarily the internet.
+
+
+---------------------------xxxxxxxxxxxxxxxxxx-----------------'z
+Software requirement:
+    front end : html,css
+    user interface : js
+    backend : nodejs,mongodb

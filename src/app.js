@@ -87,8 +87,6 @@ app.post("/signin", async(req,res) => {
             expires:new Date(Date.now() + 100000),
             httpOnly:true
         });
-
-        console.log(`cookie - ${req.cookies.jwt}`);
         
         if(isMatched){
             res.status(201).render("index");           
@@ -99,6 +97,13 @@ app.post("/signin", async(req,res) => {
     } catch (error) {
         res.status(400).send("INVALID ENTRIES");        
     }
+});
+
+// user page
+// get contact page
+app.get("/user", (req,res) => {
+    console.log(`cookie - ${req.cookies.jwt}`);
+    res.render("userPage");
 });
 
 // get contact page
