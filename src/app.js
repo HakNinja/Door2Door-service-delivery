@@ -6,6 +6,7 @@ const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
 const cookieParser = require('cookie-parser');
 
+const auth = require('./middleware/auth');
 
 require("./db/conn");
 
@@ -101,9 +102,23 @@ app.post("/signin", async(req,res) => {
 
 // user page
 // get contact page
-app.get("/user", (req,res) => {
-    console.log(`cookie - ${req.cookies.jwt}`);
+app.get("/user", auth, (req,res) => {
     res.render("userPage");
+});
+
+app.get("/logout", auth, async(req,res) => {
+    try {
+        console.log(req.user);
+        req.user.tokens = req.user.tokens.filter((currElement) => {
+            return currElement.token !== req.token;
+        });
+        res.clearCookie("jwt");
+        console.log("Logout Successfully");
+        await req.user.save();
+        res.render("signin");
+        } catch (error) {   
+            console.status(500).send(error);
+    }
 });
 
 // get contact page
