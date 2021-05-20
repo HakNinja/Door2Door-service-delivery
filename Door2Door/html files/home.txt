@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <title>DoorToDoorService/Delivery</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+      <link href="vendor/aos/aos.css" rel="stylesheet">
+      <link href="vendor/aos/aos.css" rel="stylesheet">
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      
+      <link href="css/style.css" rel="stylesheet"></head>
+    <body>
+          <!-- ======= Top Bar ======= -->
+          <section id="topbar" class="d-flex align-items-center">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+              <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+91 XXXXXXXXXX">+91 XXXXXXXXXX</a></i>
+              </div>
+        
+              <div class="cta d-none d-md-flex align-items-center">
+                <a href="signup" class="scrollto" style="color: white;background-color:#074885;">New User ? <i class="bx bxs-user-plus"></i></a>
+                <a href="signin" class="scrollto" style="color: white;background-color:#0e66b8;">Have An Account ! <i class="bx bx-log-in"></i></a>
+              </div>
+            </div>
+          </section>
+          <!-- ======= Top Bar End ======= -->          <!-- ======= Header ======= -->
+          <header id="header" class="d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+        
+              <div class="logo">
+                <h1><a href="/"><img src="assets/icon.png" alt="Icon"/></a></h1>
+              </div>
+            
+              <!-- navbar -->
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                  <li><a class="nav-link scrollto" href="#">About Us</a></li>
+                  <li class="dropdown"><a href="services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a href="#">Product Delivery</a></li>
+                      <li><a href="#">Technical Helper</a></li>
+                      <li><a href="#">Electrician</a></li>
+                      <li><a href="#">Cleaner</a></li>
+                      <li><a href="#">Gardening</a></li>
+                      <li><a href="#">Baby Sitting</a></li>
+                      <li><a href="#">Event Management</a></li>
+                      <li><a href="#">Home Tutor</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>Shopping</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a href="#">Grocery</a></li>
+                      <li><a href="#">Daily Needs</a></li>
+                      <li><a href="#">Food Items</a></li>
+                      <li><a href="#">Cosmetics</a></li>
+                      <li><a href="#">Gadgets</a></li>
+                      <li><a href="#">Decoration</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>User</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a href="signup" id="signup">Sign Up</a></li>
+                      <li><a href="signin" id="signin">Sign In</a></li>
+                      <li><a href="user" id="user">My Account</a></li>
+                      <li><a href="logout" id="logout">Log Out</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>Support</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a href="feedback">Feedback/Report</a></li>
+                      <li><a href="contact">Contact Us</a></li>
+                      <li><a href="#">Terms of Services</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Help</a></li>
+                      <li><a href="faq">FAQ</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- .navbar -->
+        
+            </div>
+          </header><!-- End Header -->
+          <!-- ======= Hero Section ======= -->
+          <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="container" data-aos="fade-in">
+              <h1>Welcome to Door to Door Service/Delivery</h1>
+              <h2>Your Imagination To Your Door Steps</h2>
+              <div class="d-flex align-items-center">
+                <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+                <a href="#" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </section><!-- End Hero -->        <main id="main"><!-- Start #main -->
+                <!-- ======= Why Us Section ======= -->
+                <section id="why-us" class="why-us">
+                  <div class="container">
+            
+                    <div class="row">
+                      <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+                        <div class="content">
+                          <h3>Why Choose Door2Door Service/Delivery?</h3>
+                          <p>
+                            Ours services might have multiple interpretations and different schools of thought, but it makes fulfillment and logistics a much easier task for you. 
+                            No lifting and shifting heavy parcels. No need to go out – particularly useful when the weather is bad! No queuing at any door for products and get home services at minimum prices.
+                          </p>
+                          <div class="text-center">
+                            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-8 col-lg-7 d-flex">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                          <div class="row">
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                              <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-dollar-circle"></i>
+                                <h4>Reduced Costs</h4>
+                                <p>Door-to-door delivery does not require you to spend any additional costs at every stage of the fulfillment process. Customers do not need to arrange for any first-mile or last-mile delivery separately.</p>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                              <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-edit"></i>
+                                <h4>Easier to Manage</h4>
+                                <p>In door-to-door delivery service, You only need to stay in contact with one individual from the courier company. This enables you to conveniently manage the entire process and overlook it for timely delivery.</p>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                              <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-receipt"></i>
+                                <h4>Single Point of Contact</h4>
+                                <p>Did not need to maintain checks and balances at every stage of the shipment transfer. This means you only need to contact or add items to their “Door2Door Services/Delivery” account and confirm shipping.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                  </div>
+                </section>
+                <!-- ======= Why Us Section ======= -->                <!-- ======= Clients Section ======= -->
+                <section id="clients" class="clients">
+                  <div class="container" data-aos="fade-up">
+            
+                    <div class="clients-slider swiper-container">
+                      <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+            
+                  </div>
+                </section><!-- End Clients Section -->                <!-- ======= Services Section ======= -->
+                <section id="services" class="services section-bg">
+                  <div class="container">
+            
+                    <div class="section-title" data-aos="fade-up">
+                      <h2>Services</h2>
+                      <p>This website will help you to get your daily needs at your doorstep. Even small to small services are available. In this website you will be getting services like:</p>
+                    </div>
+            
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-briefcase"></i></div>
+                          <h4 class="title"><a href="">Product Delivery</a></h4>
+                          <p class="description">a continuous flow of valuable products and services to customers and users</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                          <h4 class="title"><a href="">Technical Helper/ Adviser</a></h4>
+                          <p class="description">develop applications, coordinate the activities of technicians, and provide technical expertise</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-lightbulb"></i></div>
+                          <h4 class="title"><a href="">Electrician</a></h4>
+                          <p class="description">inspecting, testing, repairing, installing, and modifying electrical components and systems</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-binoculars"></i></div>
+                          <h4 class="title"><a href="">Event Management</a></h4>
+                          <p class="description">creation and development of small and/or large-scale personal or corporate events </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-stars"></i></div>
+                          <h4 class="title"><a href="">Cleaner</a></h4>
+                          <p class="description">clean houses, offices, public places, etc.</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                          <div class="icon"><i class="bi bi-flower3"></i></div>
+                          <h4 class="title"><a href="">Gardening</a></h4>
+                          <p class="description">monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, and much more</p>
+                        </div>
+                      </div>
+                    </div>
+            
+                  </div>
+                </section><!-- End Services Section -->
+                <!-- ======= Values Section ======= -->
+                <section id="values" class="values">
+                  <div class="container">
+            
+                    <div class="row">
+                      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="card" style="background-image: url(assets/img/values-1.jpg);">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="">Our Mission</a></h5>
+                            <p class="card-text">In today’s life everyone is busy with their work and sometimes they don’t have enough time to visit stores or meet the person who can solve their issues.</p>
+                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card" style="background-image: url(assets/img/values-2.jpg);">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="">Our Plan</a></h5>
+                            <p class="card-text">No queuing at any door for products and get home services at minimum prices.</p>
+                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                          </div>
+                        </div>
+            
+                      </div>
+                      <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card" style="background-image: url(assets/img/values-3.jpg);">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="">Our Vision</a></h5>
+                            <p class="card-text">You can target specific verticals or niches using online marketing.</p>
+                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card" style="background-image: url(assets/img/values-4.jpg);">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="">Our Care</a></h5>
+                            <p class="card-text"> We conducted a survey of over 1,000 buyers of professional services for a providing you more services and products.</p>
+                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section><!-- End Values Section -->                <!-- ======= Testimonials Section ======= -->
+                <section id="testimonials" class="testimonials">
+                  <div class="container position-relative" data-aos="fade-up">
+            
+                    <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                      <div class="swiper-wrapper">
+            
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                            <h3>Saul Goodman</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <p>
+                              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                          </div>
+                        </div><!-- End testimonial item -->
+            
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                            <h3>Sara Wilsson</h3>
+                            <h4>Designer</h4>
+                            <p>
+                              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                          </div>
+                        </div><!-- End testimonial item -->
+            
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                            <h3>Jena Karlis</h3>
+                            <h4>Store Owner</h4>
+                            <p>
+                              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                          </div>
+                        </div><!-- End testimonial item -->
+            
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                            <h3>Matt Brandon</h3>
+                            <h4>Freelancer</h4>
+                            <p>
+                              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                          </div>
+                        </div><!-- End testimonial item -->
+            
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                            <h3>John Larson</h3>
+                            <h4>Entrepreneur</h4>
+                            <p>
+                              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                          </div>
+                        </div><!-- End testimonial item -->
+            
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+            
+                  </div>
+                </section><!-- End Testimonials Section -->                <!-- ======= Portfolio Section ======= -->
+                <section id="portfolio" class="portfolio">
+                  <div class="container">
+            
+                    <div class="section-title">
+                      <h2 data-aos="fade-up">Shopping</h2>
+                      <p data-aos="fade-up">Browses the available goods or services presented by one or more retailers with the potential intent to purchase a suitable selection of them.</p>
+                    </div>
+            
+                    <div class="row" data-aos="fade-up" data-aos-delay="100">
+                      <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                          <li data-filter="*" class="filter-active">All</li>
+                          <li data-filter=".filter-app">Most Buying</li>
+                          <li data-filter=".filter-card">Available At Least Prices</li>
+                          <li data-filter=".filter-web">For Party</li>
+                        </ul>
+                      </div>
+                    </div>
+            
+                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>App 1</h4>
+                          <p>App</p>
+                          <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Web 3</h4>
+                          <p>Web</p>
+                          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>App 2</h4>
+                          <p>App</p>
+                          <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Card 2</h4>
+                          <p>Card</p>
+                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Web 2</h4>
+                          <p>Web</p>
+                          <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>App 3</h4>
+                          <p>App</p>
+                          <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Card 1</h4>
+                          <p>Card</p>
+                          <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Card 3</h4>
+                          <p>Card</p>
+                          <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                          <h4>Web 3</h4>
+                          <p>Web</p>
+                          <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+            
+                    </div>
+            
+                  </div>
+                </section><!-- End Portfolio Section -->                <!-- ======= Team Section ======= -->
+                <section id="team" class="team section-bg">
+                  <div class="container">
+            
+                    <div class="section-title">
+                      <h2 data-aos="fade-up">Team</h2>
+                      <p data-aos="fade-up">Let meet our talented human resource.</p>
+                    </div>
+            
+                    <div class="row">
+            
+                      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="member">
+                          <div class="member-img">
+                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                              <a href=""><i class="bi bi-twitter"></i></a>
+                              <a href=""><i class="bi bi-facebook"></i></a>
+                              <a href=""><i class="bi bi-instagram"></i></a>
+                              <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                          </div>
+                          <div class="member-info">
+                            <h4>Adhikari Gitesh</h4>
+                            <span>Team Leader</span>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member">
+                          <div class="member-img">
+                            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                              <a href=""><i class="bi bi-twitter"></i></a>
+                              <a href=""><i class="bi bi-facebook"></i></a>
+                              <a href=""><i class="bi bi-instagram"></i></a>
+                              <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                          </div>
+                          <div class="member-info">
+                            <h4>Charanjeet Singh Sidhu</h4>
+                            <span>Front End Developer</span>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member">
+                          <div class="member-img">
+                            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                              <a href=""><i class="bi bi-twitter"></i></a>
+                              <a href=""><i class="bi bi-facebook"></i></a>
+                              <a href=""><i class="bi bi-instagram"></i></a>
+                              <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                          </div>
+                          <div class="member-info">
+                            <h4>Deepak Kumar</h4>
+                            <span>Backend Developer</span>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member">
+                          <div class="member-img">
+                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                              <a href=""><i class="bi bi-twitter"></i></a>
+                              <a href=""><i class="bi bi-facebook"></i></a>
+                              <a href=""><i class="bi bi-instagram"></i></a>
+                              <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                          </div>
+                          <div class="member-info">
+                            <h4>Vijay Bhatt</h4>
+                            <span>Blogger</span>
+                          </div>
+                        </div>
+                      </div>
+            
+                    </div>
+            
+                  </div>
+                </section><!-- End Team Section -->                <!-- ======= F.A.Q Section ======= -->
+                <section id="faq" class="faq section-bg">
+                  <div class="container">
+            
+                    <div class="section-title">
+                      <h2 data-aos="fade-up">F.A.Q</h2>
+                      <p data-aos="fade-up">Need any help? Check out solution of some common problems.</p>
+                    </div>
+            
+                    <div class="faq-list">
+                      <ul>
+                        <li data-aos="fade-up">
+                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">If I order in bulk do I receive a discount?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <p>
+                              Contact us for more information on bulk ordering.
+                            </p>
+                          </div>
+                        </li>
+            
+                        <li data-aos="fade-up" data-aos-delay="100">
+                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Does Door2Door Service/Delivery accept returns?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                              Doors are purchased as is and we do not accept returns.
+                            </p>
+                          </div>
+                        </li>
+            
+                        <li data-aos="fade-up" data-aos-delay="200">
+                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Does Door2Door Service/Delivery offer a warranty on its products? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                              A-grade doors are warrantied for 1-year from date of purchase. Doors with blemishes are specially priced, and not warrantied. <a href="">For more information on our warranty policy, click here</a>
+                            </p>
+                          </div>
+                        </li>
+            
+                        <li data-aos="fade-up" data-aos-delay="300">
+                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Will you use your own vacuum cleaner and cleaning supplies or ours?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                              We prefer to use your own vacuum cleaner and cleaning supplies to avoid the spread of germs.
+                            </p>
+                          </div>
+                        </li>
+            
+                        <li data-aos="fade-up" data-aos-delay="400">
+                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Do I need to be there when you clean? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                          <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                              No. We prefer it if you are gone when we clean. Your being gone will protect you from any accident due to slippery floors and cords! Your safety comes first.
+                            </p>
+                          </div>
+                        </li>
+            
+                      </ul>
+                    </div>
+            
+                  </div>
+                </section><!-- End F.A.Q Section -->                <!-- ======= Contact Section ======= -->
+                <section id="contact" class="contact">
+                  <div class="container">
+            
+                    <div class="section-title">
+                      <h2 data-aos="fade-up">Contact</h2>
+                      <p data-aos="fade-up">Have any questions? We'd love to here from you.<br/> For all queries, contact as or submit the form below.</p>
+                    </div>
+            
+                    <div class="row justify-content-center">
+            
+                      <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up">
+                        <div class="info-box">
+                          <i class="bx bx-map"></i>
+                          <h3>Our Address</h3>
+                          <p>XYZ Street, Uttarkhand, India</p>
+                        </div>
+                      </div>
+            
+                      <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-box">
+                          <i class="bx bx-envelope"></i>
+                          <h3>Email Us</h3>
+                          <p><a href="mailto:info@example.com">info@example.com</a>
+                            <br/>
+                            <a href="mailto:contact@example.com">contact@example.com</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-box">
+                          <i class="bx bx-phone-call"></i>
+                          <h3>Call Us</h3>
+                          <p><a href="tel:+91 XXXXXXXXXX">+91 XXXXXXXXXX</a>
+                            <br/>
+                            <a href="tel:+91 YYYYYYYYYY">+91 YYYYYYYYYY</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                      <div class="col-xl-9 col-lg-12 mt-4">
+                        <form action="/contact" method="POST" role="form" class="php-email-form">
+                          <div class="row">
+                            <div class="col-md-6 form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required/>
+                            </div>
+                          </div>
+                          <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required/>
+                          </div>
+                          <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required/></textarea>
+                          </div>
+                          <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                      </div>
+            
+                    </div>
+            
+                  </div>
+                </section><!-- End Contact Section -->        </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+          <div class="footer-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                  <h3>Door To Door Service/Delivery</h3>
+                  <p>
+                   XYZ Street,<br>
+                    Uttarkhand<br>
+                    India<br><br>
+                    <strong>Phone:</strong> <a href="tel:+91 YYYYYYYYYY">+91 YYYYYYYYYY</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a><br>
+                  </p>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="services">Services</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of Service</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Support</h4>
+                  <ul>
+                    <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact Us</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="/feedback">Feedback/Report</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="/faq">FAQ</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Help</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                  <h4>Join Our Newsletter</h4>
+                  <p>Don't miss out! Enter your mail for all new update.</p>
+                  <form action="" method="post">
+                    <input type="email" name="email"><input type="submit" value="Subscribe">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container d-lg-flex py-4">
+            <div class="me-lg-auto text-center text-lg-start">
+              <div class="copyright">
+                &copy; Copyright <strong><span>Door To Door service/delivery</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                Designed by <a href="#">Charanjeet Singh Sidhu</a> and <a href="#">Deepak Kumar</a> <a href="#">(student at GEHU, Bhimtal)</a>
+              </div>
+            </div>
+            <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </footer>
+        <!-- End Footer -->        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </body>
+      <!-- Vendor JS Files -->
+      <script src="vendor/aos/aos.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="js/main.js"></script>    <script src="js/home.js"></script>
+</html>

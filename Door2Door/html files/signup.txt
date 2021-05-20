@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+
+    <link rel="icon" href="assets/favicon/signup.ico" type="image/x-icon" />
+    
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+      <link href="vendor/aos/aos.css" rel="stylesheet">
+      <link href="vendor/aos/aos.css" rel="stylesheet">
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      
+      <link href="css/style.css" rel="stylesheet">    <link href="css/signup.css" rel="stylesheet">
+    <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+      <!-- ======= Top Bar ======= -->
+      <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+91 XXXXXXXXXX">+91 XXXXXXXXXX</a></i>
+          </div>
+    
+          <div class="cta d-none d-md-flex align-items-center">
+            <a href="signup" class="scrollto" style="color: white;background-color:#074885;">New User ? <i class="bx bxs-user-plus"></i></a>
+            <a href="signin" class="scrollto" style="color: white;background-color:#0e66b8;">Have An Account ! <i class="bx bx-log-in"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- ======= Top Bar End ======= -->      <!-- ======= Header ======= -->
+      <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <div class="logo">
+            <h1><a href="/"><img src="assets/icon.png" alt="Icon"/></a></h1>
+          </div>
+        
+          <!-- navbar -->
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="/">Home</a></li>
+              <li><a class="nav-link scrollto" href="#">About Us</a></li>
+              <li class="dropdown"><a href="services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Product Delivery</a></li>
+                  <li><a href="#">Technical Helper</a></li>
+                  <li><a href="#">Electrician</a></li>
+                  <li><a href="#">Cleaner</a></li>
+                  <li><a href="#">Gardening</a></li>
+                  <li><a href="#">Baby Sitting</a></li>
+                  <li><a href="#">Event Management</a></li>
+                  <li><a href="#">Home Tutor</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Shopping</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Grocery</a></li>
+                  <li><a href="#">Daily Needs</a></li>
+                  <li><a href="#">Food Items</a></li>
+                  <li><a href="#">Cosmetics</a></li>
+                  <li><a href="#">Gadgets</a></li>
+                  <li><a href="#">Decoration</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>User</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="signup" id="signup">Sign Up</a></li>
+                  <li><a href="signin" id="signin">Sign In</a></li>
+                  <li><a href="user" id="user">My Account</a></li>
+                  <li><a href="logout" id="logout">Log Out</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Support</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="feedback">Feedback/Report</a></li>
+                  <li><a href="contact">Contact Us</a></li>
+                  <li><a href="#">Terms of Services</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="faq">FAQ</a></li>
+                </ul>
+              </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+    
+        </div>
+      </header><!-- End Header -->
+    <main id="main">
+    <section class="inner-page pt-3">
+      <div class="container">
+        <div class="left">
+          <form action="/signup" class="sign-up-form" method="POST">
+            <h2 class="title">Sign Up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" 
+                      placeholder="Username" 
+                      title="Enter a username" 
+                      name="username" 
+                      required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" 
+                      placeholder="Email" 
+                      title="Enter a valid e-mail,further need for verification" 
+                      name="email" 
+                      required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" 
+                      placeholder="Password" 
+                      title="Enter a strong password"
+			                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~'=?\|\]\[\(\)\-<>/]).{8,}" 
+                      name="password" 
+                      id="password"
+                      required />
+            </div>
+            <!-- message-1 -->
+            <div id="message">
+              <h6 id="passhead">Password must contain the following:</h6>
+              <h6 id="letter" class="invalid">A <b>lowercase</b> letter</h6>
+              <h6 id="capital" class="invalid">A <b>capital (uppercase)</b> letter</h6>
+              <h6 id="number" class="invalid">A <b>number</b></h6>
+              <h6 id="length" class="invalid">Minimum <b>8 characters</b></h6>
+              <h6 id="schar" class="invalid">A <b>special character</b></h6>
+            </div> 
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" 
+                      placeholder="Confirm Password" 
+                      title="Same as password" 
+                      name="confirmpassword" 
+                      id="confirmpassword"
+                      required />
+            </div>
+            <!-- message-2 -->
+            <div id="cmessage">
+                <h6 id="cerror" class="invalid">confirm password must be same as <b>password</b></h6>
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <!-- Or -->
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container" id="thisContainer">
+        <img src="assets/clipArt/signup.png">
+      </div>
+    </section>
+    </main>
+    <!-- End #main -->
+    <footer id="footer">
+      <div class="container d-lg-flex py-4">
+        <div class="me-lg-auto text-center text-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Door To Door service/delivery</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="#">Charanjeet Singh Sidhu</a> and <a href="#">Deepak Kumar</a> <a href="#">(student at GEHU, Bhimtal)</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer></body>
+    <!-- Vendor JS Files -->
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>  <script src="js/signup.js"></script>
+</html>
