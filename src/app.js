@@ -99,7 +99,7 @@ app.post("/signin", async(req,res) => {
             res.status(201).render("index");           
         } 
         else{
-            res.status(400).render("databaseError");                   
+            res.status(201).render("databaseError");                   
         }
     } catch (error) {
         res.status(400).render("databaseError");        
