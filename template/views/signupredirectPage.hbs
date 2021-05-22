@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/error.css"></style>
+	<script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
+	<script>
+        let seconds = 6;
+		function decrementSeconds() {
+		    seconds -= 1;
+		    document.getElementById('seconds-counter').innerText = ` ${seconds} ` ;
+		    if (seconds<=0)
+		        window.location.href="signin";
+		}
+		var cancel = setInterval(decrementSeconds, 1000);
+    </script>
+</head>
+<body>
+	<div class="mainbox">
+		<i class="fas fa-database"></i>
+		<div class="msg">
+			Your request has been processed
+			<p>Let's go to 
+				<a href="/">home</a>
+				or redirecting at login page in <span id="seconds-counter"></span> seconds...
+			</p>
+		</div>
+	</div>
+</body>
+</html>

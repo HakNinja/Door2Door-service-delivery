@@ -49,6 +49,12 @@ app.post("/signup", async(req,res) => {
             password:req.body.password,
             confirmpassword:req.body.confirmpassword
         })
+
+        const temp = await User.findOne({email:newuser.email});
+        if(temp != null){
+            return res.status(400).render("signupEmailErr");
+        }
+
         if (newuser.password===newuser.confirmpassword){
             //middleware
             const token = await newuser.generateAuthToken();
@@ -58,13 +64,13 @@ app.post("/signup", async(req,res) => {
                 httpOnly:true
             });
 
-            const Signup = await newuser.save();
-            res.status(201).render("index");    
+            await newuser.save();
+            res.status(201).render("signupredirectPage");    
         }else{
-            res.status(201).send("Make sure that password and confirm-password must be same");           
+            res.status(400).render("signupPassErr");           
         }
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).render("databaseError");
     }
 });
 
@@ -93,15 +99,15 @@ app.post("/signin", async(req,res) => {
             res.status(201).render("index");           
         } 
         else{
-            res.status(201).send("INVALID ENTRIES");           
+            res.status(400).render("databaseError");                   
         }
     } catch (error) {
-        res.status(400).send("INVALID ENTRIES");        
+        res.status(400).render("databaseError");        
     }
 });
 
 // user page
-// get contact page
+// get user page
 app.get("/user", auth, (req,res) => {
     res.render("userPage");
 });
@@ -135,7 +141,7 @@ app.post("/contact", async(req,res) => {
             subject:req.body.subject,
             message:req.body.message
         })
-        const Messaged = await inbox.save();
+        await inbox.save();
         res.status(201).render("contactPage");
     } catch (error) {
         res.status(400).send(error);
@@ -154,10 +160,10 @@ app.post("/feedback", async(req,res) => {
             subject:req.body.subject,
             feedback:req.body.feedback
         })
-        const Reported = await report.save();
+        await report.save();
         res.status(201).render("feedbackpage");
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).render("PageNotFound");
     }
 });
 
@@ -169,6 +175,12 @@ app.get("/faq", (req,res) => {
 //get services page
 app.get("/services", (req,res) => {
     res.render("servicesPage");
+});
+
+//get services page
+app.get("/error", (req,res) => {
+    // res.render("dummyError");
+    res.render("PageNotFound");
 });
 
 //listing at
