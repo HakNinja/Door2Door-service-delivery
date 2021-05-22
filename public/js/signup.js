@@ -66,11 +66,12 @@ if(myInput.value.match(/[!@#$%^&*+`~'.=,*?\|\]\{\}\[\(\)\\\-<>/]/g)) {
     schar.classList.remove("valid");
     schar.classList.add("invalid");
   }
-
-    if (document.getElementById("message").innerText === "Password must contain the following:"){
-        document.getElementById("message").style.display = "none";
+    let message = document.getElementById("message");
+    if (message.innerText == "Password must contain the following:" || message.innerText ===""){
+        message.innerText = "";
+        message.style.display = "none";
     } else {
-        document.getElementById("message").style.display = "block";
+      message.style.display = "block";
     }
 }
 

@@ -389,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 60px; /* 48px */
+  font-size: 54px; /* 48px */
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h2 {
   color: #eee;
-  font-size: 28px; /* 24px */
+  font-size: 30px; /* 24px */
   font-family: monospace;
   margin-bottom: 50px;
 }
