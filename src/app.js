@@ -65,7 +65,7 @@ app.post("/signup", async(req,res) => {
             });
 
             await newuser.save();
-            res.status(201).render("signupredirectPage");    
+            res.status(201).render("signupRedirectPage");    
         }else{
             res.status(400).render("signupPassErr");           
         }
@@ -91,12 +91,12 @@ app.post("/signin", async(req,res) => {
         const token = await temp.generateAuthToken();
 
         res.cookie("jwt", token, {
-            expires:new Date(Date.now() + 100000),
+            expires:new Date(Date.now() + 2592000000),
             httpOnly:true
         });
         
         if(isMatched){
-            res.status(201).render("index");           
+            res.status(201).render("signinRedirectPage");    
         } 
         else{
             res.status(201).render("databaseError");                   
@@ -119,11 +119,10 @@ app.get("/logout", auth, async(req,res) => {
             return currElement.token !== req.token;
         });
         res.clearCookie("jwt");
-        console.log("Logout Successfully");
         await req.user.save();
-        res.render("signin");
+        res.status(201).render("logoutRedirectPage");    
         } catch (error) {   
-            console.status(500).send(error);
+            res.status(500).render("databaseError");        
     }
 });
 
@@ -142,9 +141,9 @@ app.post("/contact", async(req,res) => {
             message:req.body.message
         })
         await inbox.save();
-        res.status(201).render("contactPage");
+        res.status(201).render("homeRedirectPage");    
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).render("PageNotFound");
     }
 });
 
@@ -161,7 +160,7 @@ app.post("/feedback", async(req,res) => {
             feedback:req.body.feedback
         })
         await report.save();
-        res.status(201).render("feedbackpage");
+        res.status(201).render("homeRedirectPage");    
     } catch (error) {
         res.status(400).render("PageNotFound");
     }
@@ -172,14 +171,13 @@ app.get("/faq", (req,res) => {
     res.render("faqPage");
 });
 
-//get services page
+// get services page
 app.get("/services", (req,res) => {
     res.render("servicesPage");
 });
 
-//get services page
-app.get("/error", (req,res) => {
-    // res.render("dummyError");
+// get PageNotFound
+app.get("/PageNotFound", (req,res) => {
     res.render("PageNotFound");
 });
 
