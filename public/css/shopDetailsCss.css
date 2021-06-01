@@ -1,0 +1,32 @@
+.outer{
+    display: flex;
+    flex-direction: row; 
+  }
+  #productImg{
+    width: 40rem;
+    height: auto;
+  }
+  .right{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  #productName{
+    text-transform: capitalize;
+  }
+  input[type=number]{
+    width: 5rem;
+  } 
+  input[type=submit]{
+    margin-top: 1rem;
+    color: white;
+    background-color: #1e88fa; 
+    border-color: rgb(34, 0, 255);
+    font-size: 2rem;
+    border-radius: 9px;
+  } 
+  input[type=submit]:hover{
+    background-color: #000;
+  } 

@@ -1,2 +1,22 @@
-<h1>{{productImg}}</h1>
-<h1>{{productName}}</h1>
+    <!-- ======= Shop Details Section ======= -->
+      <div class="container">
+        <div class="section-title">
+          <h2 data-aos="fade-up">Product Details</h2>
+          <p data-aos="fade-up">Add the product to the cart and set delivery location</p>
+        </div>
+        <div data-aos="fade-up" class="outer">
+            <div class="left">
+              <img id="productImg" src="{{productImg}}"/>
+            </div>
+            <div class="right">
+              <h1>Product Name : <span id="productName">{{productName}}</span></h1>
+              <form action="#" >
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" value="1" required/>
+                <br/>
+                <input type="submit" value="Add to Cart"/>
+              </form>
+            </div>
+        </div>
+      </div>
+      <!-- End Shop Details -->
