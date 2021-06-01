@@ -166,6 +166,15 @@ app.post("/feedback", async(req,res) => {
     }
 });
 
+// get shop detail page
+app.post("/shopDetails", async(req,res) => {
+    try {   
+        res.render("shopDetailsPage",{productImg:req.body.productImg, productName:req.body.productName});
+    } catch (error) {
+        console.log("something wrong...");
+    }
+});
+
 // get faq page
 app.get("/faq", (req,res) => {
     res.render("faqPage");
