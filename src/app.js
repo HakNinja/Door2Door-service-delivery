@@ -107,7 +107,6 @@ app.post("/signin", async(req,res) => {
 
 app.get("/logout", auth, async(req,res) => {
     try {
-        console.log(req.user);
         req.user.tokens = req.user.tokens.filter((currElement) => {
             return currElement.token !== req.token;
         });
@@ -171,7 +170,7 @@ app.post("/shopDetails", async(req,res) => {
 // user page
 // get user page
 app.get("/user", auth, (req,res) => {
-    res.render("userPage");
+    res.render("userPage",{username:req.user.username, useremail:req.user.email, userproduct:req.user.products});
 });
 
 // post add to cart page
@@ -181,9 +180,18 @@ app.post("/addToCart", auth, async(req,res) => {
         await req.user.save();
         res.status(201).render("addToCartPage");        
     } catch (error) {
-        console.log(error);
         res.status(400).render("PageNotFound");
     }
+});
+
+// get shopping page
+app.get("/shopping", (req,res) => {
+    res.render("shopPage");
+});
+
+// get aboutus page
+app.get("/aboutus", (req,res) => {
+    res.render("aboutUsPage");
 });
 
 // get faq page
