@@ -66,7 +66,7 @@ app.post("/signup", async(req,res) => {
 
             await newuser.save();
             res.status(201).render("signupRedirectPage");    
-        }else{
+        } else {
             res.status(400).render("signupPassErr");           
         }
     } catch (error) {
@@ -97,8 +97,7 @@ app.post("/signin", async(req,res) => {
         
         if(isMatched){
             res.status(201).render("signinRedirectPage");    
-        } 
-        else{
+        } else {
             res.status(201).render("databaseError");                   
         }
     } catch (error) {
@@ -176,11 +175,13 @@ app.get("/user", auth, (req,res) => {
 });
 
 // post add to cart page
-app.post("/addToCart", auth, (req,res) => {
+app.post("/addToCart", auth, async(req,res) => {
     try {
-
-        res.render("addToCartPage");        
+        eval(`req.user.products.${req.body.productName} = ${req.body.productQuantity}`);
+        await req.user.save();
+        res.status(201).render("addToCartPage");        
     } catch (error) {
+        console.log(error);
         res.status(400).render("PageNotFound");
     }
 });

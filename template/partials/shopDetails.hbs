@@ -12,7 +12,8 @@
               <h1>Product Name : <span id="productName">{{productName}}</span></h1>
               <form action="/addToCart" method="POST">
                 <label for="quantity">Quantity</label>
-                <input type="number" name="quantity" id="quantity" value="1" required/>
+                <input type="hidden" name="productName" id="productName" value="{{{productName}}}"/>
+                <input type="number" name="productQuantity" id="quantity" value="1" required/>
                 <br/>
                 <input type="submit" value="Add to Cart"/>
               </form>

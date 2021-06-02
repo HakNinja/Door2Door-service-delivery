@@ -19,6 +19,56 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    products:{
+        bag:{
+            type:Number, 
+            default:0
+        },
+        camera:{
+            type:Number, 
+            default:0
+        },
+        cap:{
+            type:Number, 
+            default:0
+        },
+        clock:{
+            type:Number, 
+            default:0
+        },
+        cosmetics:{
+            type:Number, 
+            default:0
+        },
+        cup:{
+            type:Number, 
+            default:0
+        },
+        heels:{
+            type:Number, 
+            default:0
+        },
+        headphone:{
+            type:Number, 
+            default:0
+        },
+        foundation:{
+            type:Number, 
+            default:0
+        },
+        libstick:{
+            type:Number, 
+            default:0
+        },
+        shoe:{
+            type:Number, 
+            default:0
+        },
+        watch:{
+            type:Number, 
+            default:0
+        }
+    },
     tokens:[{
         token:{
             type:String,
@@ -38,7 +88,6 @@ userSchema.methods.generateAuthToken = async function(){
         //console.log(userVer);
     } catch (error) {
             res.status(500).render("databaseError");        
-            // res.send("ERRRRRor");
     }
 }
 
