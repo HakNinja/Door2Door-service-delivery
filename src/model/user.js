@@ -37,8 +37,8 @@ userSchema.methods.generateAuthToken = async function(){
         //const userVer= await jwt.verify(token,process.env.SECRET_KEY);
         //console.log(userVer);
     } catch (error) {
-        res.send("ERRRRRor");
-        console.log("ERRRRRor");
+            res.status(500).render("databaseError");        
+            // res.send("ERRRRRor");
     }
 }
 
