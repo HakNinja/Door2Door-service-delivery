@@ -9,9 +9,32 @@
             <br/>
             <span>Email : </span>{{useremail}}
             <br/>
-            <span>Cart List : </span><code>{{userproduct}}</code>
+            <span>Cart List : </span><code id="cart">{{userproduct}}</code>
             <br/>
           <form action="logout"><input type="submit" value="Log Out"></form>
         </div>
       </div>  
     <!-- End User Section -->
+
+    <!-- cart display -->
+    <script>
+      cartArray = document.getElementById("cart").innerHTML;
+      cartArray = cartArray.split(",");
+      cartElement = "<br/>";
+
+      cartArray.forEach(function (item, index){
+        item = item.replace("\n","");
+        item = item.replace("{","")
+        item = item.replace("}","")
+        item = item.replace("\n","");
+        item = item.replace(/\s+/g, ' ').trim();
+        item = item.split(":");
+        if (item[1]>0){
+          console.log(item);
+          cartElement = cartElement+`${item[0]} : ${item[1]}<br/>`;
+        }
+      });
+
+      document.getElementById("cart").innerHTML = cartElement;
+
+    </script>
