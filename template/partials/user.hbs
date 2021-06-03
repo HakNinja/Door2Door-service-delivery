@@ -1,16 +1,18 @@
     <!-- ======= User Section ======= -->
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-down">
         <div class="section-title">
           <h1>Hello, {{username}}</h1>
-          <p>|--------- Your Database ---------|</p>
+          <p>Your Account Details</p>
+          <hr/>
         </div>
-        <div class="text-center">
+        <div class="text-center" style="margin-top:-30px;" data-aos="fade-up" data-aos-delay="500">
             <span>Username : </span>{{username}}
             <br/>
             <span>Email : </span>{{useremail}}
             <br/>
-            <span>Cart List : </span><code id="cart">{{userproduct}}</code>
-            <br/>
+            <div class="text-center">
+              <span>Cart List : </span><div id="cart">{{userproduct}}</div>
+            </div>
           <form action="logout"><input type="submit" value="Log Out"></form>
         </div>
       </div>  
@@ -20,7 +22,8 @@
     <script>
       cartArray = document.getElementById("cart").innerHTML;
       cartArray = cartArray.split(",");
-      cartElement = "<br/>";
+      cartElement = "<table id='table' style='text-align:left;'>";
+      cartElement = cartElement+"<tr><th>Product</th><th>Quantity</th></tr>";
 
       cartArray.forEach(function (item, index){
         item = item.replace("\n","");
@@ -31,10 +34,13 @@
         item = item.split(":");
         if (item[1]>0){
           console.log(item);
-          cartElement = cartElement+`${item[0]} : ${item[1]}<br/>`;
+          cartElement = cartElement+`<tr><td>${item[0]}</td><td>${item[1]}</td></tr>`;
         }
       });
 
-      document.getElementById("cart").innerHTML = cartElement;
+      cartElement = cartElement+"</table>";
+      var tableCss=`<style>tr,th,td{ border : 1px solid #a4d3f6;}</style>`;
+      document.getElementById("cart").style.display = "inline-flex";
+      document.getElementById("cart").innerHTML = cartElement + tableCss;
 
     </script>
