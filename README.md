@@ -1,7 +1,1 @@
-<pre align="center">
-|-------------------------------------------|<br/>
-|                                           |<br/>
-| rename 'root' directory to "Door2DoorSD"  |<br/>
-|                                           |<br/>
-|-------------------------------------------|
-</pre>
+In today’s life everyone is busy with their work and sometimes they don’t have enough time to visit stores or meet the person who can solve their issues. So, we are here. Our motto will help you to bring YOUR IMAGINATION TO YOUR DOORSTEP. This website will help you to get your daily needs at your doorstep. Even small to small services are available.
