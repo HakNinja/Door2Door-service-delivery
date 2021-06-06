@@ -67,8 +67,7 @@ if(myInput.value.match(/[!@#$%^&*+`~'.=,*?\|\]\{\}\[\(\)\\\-<>/]/g)) {
     schar.classList.add("invalid");
   }
     let message = document.getElementById("message");
-    if (message.innerText === "Password must contain the following:" || message.innerText ===""){
-        message.innerText = "";
+    if (message.innerText === "Password must contain the following:"){
         message.style.display = "none";
     } else {
       message.style.display = "block";

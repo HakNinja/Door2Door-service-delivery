@@ -6,12 +6,12 @@
           <hr/>
         </div>
         <div class="text-center" style="margin-top:-30px;" data-aos="fade-up" data-aos-delay="500">
-            <span>Username : </span>{{username}}
+            <strong>Username : </strong>{{username}}
             <br/>
-            <span>Email : </span>{{useremail}}
+            <strong>Email : </strong>{{useremail}}
             <br/>
             <div class="text-center">
-              <span>Cart List : </span><div id="cart">{{userproduct}}</div>
+              <strong>Cart List : </strong><div id="cart">{{userproduct}}</div>
             </div>
           <form action="logout"><input type="submit" value="Log Out"></form>
         </div>
@@ -39,7 +39,7 @@
       });
 
       cartElement = cartElement+"</table>";
-      var tableCss=`<style>tr,th,td{ border : 1px solid #a4d3f6;}</style>`;
+      var tableCss=`<style>table{display:flex;margin-top:10px;} tr,th,td{border: 1px solid #c5e5fd;} td{background-color:#d6edff}</style>`;
       document.getElementById("cart").style.display = "inline-flex";
       document.getElementById("cart").innerHTML = cartElement + tableCss;
 
