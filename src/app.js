@@ -42,7 +42,7 @@ app.get("/signup", (req,res) => {
 });
 
 // mailing 
-function sendEmailuser(email, name) {
+function sendEmailuser(email, name, mailOnBehalf="") {
     var transporter = nodemailer.createTransport({
         service: process.env.services,
         tls: {
@@ -54,75 +54,133 @@ function sendEmailuser(email, name) {
         }
     })
 
-    transporter.sendMail({
-        from: process.env.from,
-        to: email,
-        subject: "Support",
-        html: `<pre>Hi <b>${name}</b>,
+    if ( mailOnBehalf === "signup" ){
+        transporter.sendMail({
+            from: process.env.from,
+            to: email,
+            subject: "Support",
+            html: `<pre>Hi <b>${name}</b>,
+    
+                Thanks for getting in touch with us. 
+                
+                You have successfully signup for our servies. 
+    
+                Need help in the meantime check out our Contact Page for more.
+                
+                With Best Regards from,
+                Admin.
+                Thank You
+                
+                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+        }, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(201).send("Mail sent Sucessfully");
+            }
+            })
+    } else if ( mailOnBehalf === "message" ){
+        transporter.sendMail({
+            from: process.env.from,
+            to: email,
+            subject: "Support",
+            html: `<pre>Hi <b>${name}</b>,
+    
+                Thanks for getting in touch with us. 
+                
+                You have get your query. We will get back to you in next 24 hours.
 
-            Thanks for getting in touch with us. 
-            We've got your details as:
+                Need help in the meantime check out our Contact Page for more.
+                
+                With Best Regards from,
+                Admin.
+                Thank You
+                
+                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+        }, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(201).send("Mail sent Sucessfully");
+            }
+            })
+    } else if ( mailOnBehalf === "addToCart" ){
+        transporter.sendMail({
+            from: process.env.from,
+            to: email,
+            subject: "Support",
+            html: `<pre>Hi <b>${name}</b>,
+    
+                Thanks for getting in touch with us. 
+                
+                Some item are added to your cart.
 
-            Name : <b>${name}</b>
+                Need help in the meantime check out our Contact Page for more.
+                
+                With Best Regards from,
+                Admin.
+                Thank You
+                
+                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+        }, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(201).send("Mail sent Sucessfully");
+            }
+            })
+    } else if ( mailOnBehalf === "logout" ){
+        transporter.sendMail({
+            from: process.env.from,
+            to: email,
+            subject: "Support",
+            html: `<pre>Hi <b>${name}</b>,
+    
+                You have successfully logout.    
 
-            We will get back to you in next 24 hours.
-            Need help in the meantime check out our Contact Page for more.
-            
-            With Best Regards from,
-            Admin.
-            Thank You
-            
-            <i>For More Support.. Mail us at @officialcharanjeetsinghsidhu@gmail.com</i>
+                Need help then check out our Contact Page for more.
+                
+                With Best Regards from,
+                Admin.
+                Thank You
+                
+                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+        }, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(201).send("Mail sent Sucessfully");
+            }
+        })
+    } else {
+        transporter.sendMail({
+            from: process.env.from,
+            to: email,
+            subject: "Support",
+            html: `<pre>Hi <b>${name}</b>,
+    
+                You have successfully signin.    
 
-            <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
-    }, (err, res) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.status(201).send("Mail sent Sucessfully");
-        }
-    })
-}
-
-function sendEmailfunadmin(email, name, phone,message) {
-    var transporter = nodemailer.createTransport({
-        service: process.env.services,
-        tls: {
-            rejectUnauthorized: false
-        },
-        auth: {
-            user: process.env.user,
-            pass: process.env.pass
-        }
-    })
-
-    transporter.sendMail({
-        from: process.env.from,
-        to: process.env.user,
-        subject:  `${name} user wants to reach you..` ,
-        html: `<pre>Dear <b> Admin</b>,
-            ${name} , has put a query to reach you Via your mail.
-            Kindly checkout the database and reply-back the customer ASAP.
-            
-            Details of the customer is:
-            
-            Name : <b>${name}</b>
-            Contact number : <b>${phone}</b>
-            Query:<i>${message}</i>
-            
-            Admin
-            Thank You
-
-            <i>For more Support..Mail us at @officialcharanjeetsinghsidhu@gmail.com</i>
-
-            <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
-    }, (err, res) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("Mail Sent to the admin.")
-        }
-    })
+                Need help then check out our Contact Page for more.
+                
+                With Best Regards from,
+                Admin.
+                Thank You
+                
+                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+        }, (err, res) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(201).send("Mail sent Sucessfully");
+            }
+        })
+    }
 }
 
 
@@ -149,9 +207,7 @@ app.post("/signup", async(req,res) => {
                 expires:new Date(Date.now() + 100000),
                 httpOnly:true
             });
-            console.log("sending mail")
-            await sendEmailuser(newuser.email, newuser.username);
-            console.log("sended mail")
+            await sendEmailuser(newuser.email, newuser.username, "signup");
             await newuser.save();
             res.status(201).render("signupRedirectPage");    
         } else {
@@ -159,7 +215,6 @@ app.post("/signup", async(req,res) => {
         }
     } catch (error) {
         console.log(error)
-        // res.send(error)
         res.status(400).render("databaseError");
     }
 });
@@ -186,6 +241,7 @@ app.post("/signin", async(req,res) => {
         });
         
         if(isMatched){
+            await sendEmailuser(temp.email, temp.username);
             res.status(201).render("signinRedirectPage");    
         } else {
             res.status(201).render("databaseError");                   
@@ -202,6 +258,7 @@ app.get("/logout", auth, async(req,res) => {
         });
         res.clearCookie("jwt");
         await req.user.save();
+        await sendEmailuser(req.user.email, req.user.username, "logout");
         res.status(201).render("logoutRedirectPage");    
         } catch (error) {   
             res.status(500).render("databaseError");        
@@ -223,6 +280,7 @@ app.post("/contact", async(req,res) => {
             message:req.body.message
         })
         await inbox.save();
+        await sendEmailuser(inbox.email, inbox.name, "message");
         res.status(201).render("homeRedirectPage");    
     } catch (error) {
         res.status(400).render("PageNotFound");
@@ -266,10 +324,12 @@ app.get("/user", auth, (req,res) => {
 // post add to cart page
 app.post("/addToCart", auth, async(req,res) => {
     try {
-        eval(`req.user.products.${req.body.productName} = ${req.body.productQuantity}`);
+        eval(`req.user.products.${req.body.productName} = req.user.products.${req.body.productName} + ${req.body.productQuantity}`);
         await req.user.save();
+        await sendEmailuser(req.user.email, req.user.username, "addToCart");
         res.status(201).render("addToCartPage");        
     } catch (error) {
+        console.log(error)
         res.status(400).render("PageNotFound");
     }
 });
