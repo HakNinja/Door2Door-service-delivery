@@ -5,6 +5,7 @@ const app = express();
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
 const cookieParser = require('cookie-parser');
+const nodemailer = require('nodemailer');
 
 const auth = require('./middleware/auth');
 
@@ -40,6 +41,91 @@ app.get("/signup", (req,res) => {
     res.render("signup");
 });
 
+// mailing 
+function sendEmailuser(email, name) {
+    var transporter = nodemailer.createTransport({
+        service: process.env.services,
+        tls: {
+            rejectUnauthorized: false
+        },
+        auth: {
+            user: process.env.user,
+            pass: process.env.pass
+        }
+    })
+
+    transporter.sendMail({
+        from: process.env.from,
+        to: email,
+        subject: "Support",
+        html: `<pre>Hi <b>${name}</b>,
+
+            Thanks for getting in touch with us. 
+            We've got your details as:
+
+            Name : <b>${name}</b>
+
+            We will get back to you in next 24 hours.
+            Need help in the meantime check out our Contact Page for more.
+            
+            With Best Regards from,
+            Admin.
+            Thank You
+            
+            <i>For More Support.. Mail us at @officialcharanjeetsinghsidhu@gmail.com</i>
+
+            <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+    }, (err, res) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(201).send("Mail sent Sucessfully");
+        }
+    })
+}
+
+function sendEmailfunadmin(email, name, phone,message) {
+    var transporter = nodemailer.createTransport({
+        service: process.env.services,
+        tls: {
+            rejectUnauthorized: false
+        },
+        auth: {
+            user: process.env.user,
+            pass: process.env.pass
+        }
+    })
+
+    transporter.sendMail({
+        from: process.env.from,
+        to: process.env.user,
+        subject:  `${name} user wants to reach you..` ,
+        html: `<pre>Dear <b> Admin</b>,
+            ${name} , has put a query to reach you Via your mail.
+            Kindly checkout the database and reply-back the customer ASAP.
+            
+            Details of the customer is:
+            
+            Name : <b>${name}</b>
+            Contact number : <b>${phone}</b>
+            Query:<i>${message}</i>
+            
+            Admin
+            Thank You
+
+            <i>For more Support..Mail us at @officialcharanjeetsinghsidhu@gmail.com</i>
+
+            <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
+    }, (err, res) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Mail Sent to the admin.")
+        }
+    })
+}
+
+
 // post signup page + new user
 app.post("/signup", async(req,res) => {
     try {
@@ -63,13 +149,17 @@ app.post("/signup", async(req,res) => {
                 expires:new Date(Date.now() + 100000),
                 httpOnly:true
             });
-
+            console.log("sending mail")
+            await sendEmailuser(newuser.email, newuser.username);
+            console.log("sended mail")
             await newuser.save();
             res.status(201).render("signupRedirectPage");    
         } else {
             res.status(400).render("signupPassErr");           
         }
     } catch (error) {
+        console.log(error)
+        // res.send(error)
         res.status(400).render("databaseError");
     }
 });
