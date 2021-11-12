@@ -1,4 +1,4 @@
-systemctl start mongodb
+# systemctl start mongodb
 echo "mongodb started ..."
 echo ""
 echo "running server in background ..."
