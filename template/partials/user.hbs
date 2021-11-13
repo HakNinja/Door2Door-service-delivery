@@ -11,7 +11,7 @@
             <strong>Email : </strong>{{useremail}}
             <br/>
             <div class="text-center">
-              <strong>Cart List : </strong><div id="cart">{{userproduct}}</div>
+              <strong>Cart List : </strong><br/><div id="cart">{{userproduct}}</div>
             </div>
           <form action="logout"><input type="submit" value="Log Out"></form>
         </div>
@@ -23,7 +23,7 @@
       cartArray = document.getElementById("cart").innerHTML;
       cartArray = cartArray.split(",");
       cartElement = "<table id='table' style='text-align:left;'>";
-      cartElement = cartElement+"<tr><th>Product</th><th>Quantity</th></tr>";
+      cartElement = cartElement+"<tr><th>Image</th><th>Product</th><th>Quantity</th></tr>";
 
       cartArray.forEach(function (item, index){
         item = item.replace("\n","");
@@ -34,7 +34,7 @@
         item = item.split(":");
         if (item[1]>0){
           console.log(item);
-          cartElement = cartElement+`<tr><td>${item[0]}</td><td>${item[1]}</td></tr>`;
+          cartElement = cartElement+`<tr><td><img class='userProductImg' src=${'/assets/img/shop/profileImg/'+item[0]+'.jpg'} alt="Not Available"></img></td><td>${item[0]}</td><td>${item[1]}</td></tr>`;
         }
       });
 
