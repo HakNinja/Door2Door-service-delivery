@@ -71,7 +71,7 @@ function sendEmailuser(email, name, mailOnBehalf="") {
                 Admin.
                 Thank You
                 
-                <i>For More Support.. Mail us at @officialdoor2door@gmail.com</i>
+                <i>For More Support.. Mail us at infodoortodoor@gmail.com</i>
                 <i>***** This is an autogenrated email. Please don't reply back.*****</pre>`,
         }, (err, res) => {
             if (err) {
@@ -113,9 +113,9 @@ function sendEmailuser(email, name, mailOnBehalf="") {
             subject: "Support",
             html: `<pre>Hi <b>${name}</b>,
     
-                Thanks for getting in touch with us. 
+                Thanks for giving time on our platform. 
                 
-                Some item are added to your cart.
+                Some item are added to your cart.Kindly go through your cart and order th items you need.
 
                 Need help in the meantime check out our Contact Page for more.
                 
@@ -139,7 +139,7 @@ function sendEmailuser(email, name, mailOnBehalf="") {
             subject: "Support",
             html: `<pre>Hi <b>${name}</b>,
     
-                You have successfully logout.    
+                You have successfully logout form your account on our Platfrom.    
 
                 Need help then check out our Contact Page for more.
                 
@@ -163,7 +163,8 @@ function sendEmailuser(email, name, mailOnBehalf="") {
             subject: "Support",
             html: `<pre>Hi <b>${name}</b>,
     
-                You have successfully signin.    
+                You have successfully signin. 
+                Thanks for choosing our services hope you will like your services   
 
                 Need help then check out our Contact Page for more.
                 
